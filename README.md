@@ -16,3 +16,13 @@ opt/odoo/odoo-bin addons-path=technicaltraining
 4. enjoy
 
 
+### for Update module after any lecture
+go to inside technicaltraining folder and run this command 
+
+```bash
+git pull
+```
+
+
+
+
