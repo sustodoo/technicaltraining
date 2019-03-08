@@ -1,0 +1,86 @@
+<odoo>
+    <data>
+        <record id="college_action_view" model="ir.actions.act_window">
+            <field name="name">college</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">college.college</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                </p>
+            </field>
+        </record>
+
+        <record id="employee_action_view" model="ir.actions.act_window">
+            <field name="name">employee</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">college.employee</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                </p>
+            </field>
+        </record>
+
+
+        <record id="employee_form_view" model="ir.ui.view">
+            <field name="name">employee</field>
+            <field name="model">college.employee</field>
+            <field name="arch" type="xml">
+                <form string="Employee">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="hiring_date"/>
+                            </group>
+
+                            <group>
+                                <field name="code"/>
+                                <field name="type"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="employee_tree_view" model="ir.ui.view">
+            <field name="name">employee</field>
+            <field name="model">college.employee</field>
+            <field name="arch" type="xml">
+                <tree string="">
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="type"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="employee_search_view" model="ir.ui.view">
+            <field name="name">employee</field>
+            <field name="model">college.employee</field>
+            <field name="arch" type="xml">
+                <search string="">
+                    <filter name="type" string="Type" context="{'group_by':'type'}"/>
+                </search>
+            </field>
+        </record>
+
+
+        <!-- This Menu Item will appear in the Upper bar, That's why It needs NO parent or action -->
+        <menuitem id="main_menu_college" name="College"/>
+
+        <!-- This Menu Item Must have a parent -->
+        <menuitem id="configuration_menu" name="Configuration" parent="main_menu_college"/>
+
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="menu_college" name="college" parent="configuration_menu" action="college_action_view"/>
+
+        <menuitem id="menu_employee" name="Employee" parent="configuration_menu" action="employee_action_view"/>
+
+
+    </data>
+</odoo>
