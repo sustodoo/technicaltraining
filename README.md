@@ -7,17 +7,18 @@ sudo su odoo
 ```
 2. download module from github repository
 ```bash
-sudo /opt/odoo/git clone https://github.com/sustodoo/technicaltraining.git
+cd /opt/odoo
+git clone https://github.com/sustodoo/technicaltraining.git
 ```
 3. run odoo server and add new addons path
 ```bash
-opt/odoo/odoo-bin addons-path=technicaltraining
+odoo-bin addons-path=technicaltraining
 ```
 4. enjoy
 
 
 ### for Update module after any lecture
-go to inside technicaltraining folder and run this command 
+go to inside technicaltraining folder and run this command
 
 ```bash
 git pull
