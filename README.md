@@ -1,1 +1,1 @@
-"# technicaltraining" 
+# technicaltraining

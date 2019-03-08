@@ -64,7 +64,6 @@
             </field>
         </record>
 
-
         <!-- Inherit Form View to Modify it -->
         <record id="employee_form_view_payslip" model="ir.ui.view">
             <field name="name">Employee</field>
@@ -81,7 +80,6 @@
 
             </field>
         </record>
-
 
         <!-- This Menu Item will appear in the Upper bar, That's why It needs NO parent or action -->
         <menuitem id="payslip_main_menu" name="Payslip"/>
