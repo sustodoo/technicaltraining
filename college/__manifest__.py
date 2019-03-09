@@ -25,6 +25,7 @@
     'data': [
         # 'security/ir.model.access.csv',
         'views/views.xml',
+        'views/update_salary.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

@@ -1,28 +1,22 @@
 <odoo>
     <data>
-        <record id="college_action_view" model="ir.actions.act_window">
-            <field name="name">college</field>
-            <field name="type">ir.actions.act_window</field>
-            <field name="res_model">college.college</field>
-            <field name="view_mode">tree,form</field>
-            <field name="help" type="html">
-                <p class="oe_view_nocontent_create">
-                </p>
-            </field>
-        </record>
+        <!--College action view-->
+        <act_window id="college_action_view"
+                    name="College"
+                    res_model="college.college"
+                    view_mode="tree,form"
+                    target="current"
+        />
 
-        <record id="employee_action_view" model="ir.actions.act_window">
-            <field name="name">employee</field>
-            <field name="type">ir.actions.act_window</field>
-            <field name="res_model">college.employee</field>
-            <field name="view_mode">tree,form</field>
-            <field name="help" type="html">
-                <p class="oe_view_nocontent_create">
-                </p>
-            </field>
-        </record>
+        <!--employee action view-->
+        <act_window id="employee_action_view"
+                    name="Employee"
+                    res_model="college.employee"
+                    view_mode="tree,form"
+                    target="current"
+        />
 
-
+        <!-- employee form view-->
         <record id="employee_form_view" model="ir.ui.view">
             <field name="name">employee</field>
             <field name="model">college.employee</field>
@@ -45,7 +39,7 @@
             </field>
         </record>
 
-
+       <!-- employee tree view -->
         <record id="employee_tree_view" model="ir.ui.view">
             <field name="name">employee</field>
             <field name="model">college.employee</field>
@@ -58,7 +52,7 @@
             </field>
         </record>
 
-
+        <!-- employee search view -->
         <record id="employee_search_view" model="ir.ui.view">
             <field name="name">employee</field>
             <field name="model">college.employee</field>

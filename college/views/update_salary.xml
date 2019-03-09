@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <act_window id="employee_update_salary"
+                    name="Update Salary"
+                    src_model="college.employee"
+                    res_model="college.update.salary"
+                    view_mode="form"
+                    target="new"
+                    key2="client_action_multi"/>
+
+        <record model="ir.ui.view" id="wizard_form_view">
+            <field name="name">wizard.form</field>
+            <field name="model">college.update.salary</field>
+            <field name="arch" type="xml">
+                <form string="Update Salary">
+                    <group>
+                        <field name="type"/>
+                        <field name="addition"/>
+                    </group>
+                      <footer>
+                        <button name="update" type="object"
+                                string="Update" class="oe_highlight"/>
+                        or
+                        <button special="cancel" string="Cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="update_salary_menu" name="Update Salary" parent="configuration_menu" action="employee_update_salary" />
+
+
+
+
+
+
+
+
+    </data>
+</odoo>

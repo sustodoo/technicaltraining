@@ -15,7 +15,7 @@ class Employee(models.Model):
 
     name = fields.Char('Name')
     code = fields.Char('Code')
-    type = state = fields.Selection(string="", selection=[('academic', 'Academic'), ('admin', 'Administrative'),('workers','Workers') ], required=False, )
+    type = fields.Selection(string="Type", selection=[('academic', 'Academic'), ('admin', 'Administrative'),('workers','Workers') ], required=False, )
     hiring_date = fields.Date(string="Hiring Date", required=False, )
     collage_id =fields.Many2one(comodel_name="college.college", string="College", required=False, )
 
