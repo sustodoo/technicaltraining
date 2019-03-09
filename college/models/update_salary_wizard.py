@@ -8,5 +8,6 @@ class UpdateSalary(models.TransientModel):
     addition = fields.Float(string="addition",  required=False, )
 
     def update(self):
-        employee = self.env['college.employee'].browse([])
-        print(employee)
+        employee = self.env['college.employee'].search([('type','=',self.type)]) or []
+        for emp in employee:
+            emp.salary += self.addition*emp.salary/100

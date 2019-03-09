@@ -31,12 +31,5 @@
         <!-- This Menu Item must have a parent and an action -->
         <menuitem id="update_salary_menu" name="Update Salary" parent="configuration_menu" action="employee_update_salary" />
 
-
-
-
-
-
-
-
     </data>
 </odoo>
