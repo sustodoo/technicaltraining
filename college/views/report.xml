@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- QWeb Reports -->
+    <!-- NAME & FILE_NAME should be the same -->
+    <report
+            id="employee_report"
+            model="college.employee"
+            report_type="qweb-pdf"
+            string="Employee Info"
+            name="college.employee_view"
+            file="college.employee_report"
+    />
+
+    <template id="employee_view">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <center>
+                            <h2>Employee Info</h2>
+                        </center>
+                        <table class="table table-condensed">
+                            <thead>
+                                <tr>
+                                    <th class="text-right">Name</th>
+                                    <th class="text-right">Code</th>
+                                    <th class="text-right">Type</th>
+                                    <th class="text-right">Hiring Date</th>
+                                    <th class="text-right">College</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr t-foreach="docs" t-as="doc">
+                                    <td>
+                                        <p t-field="doc.name"></p>
+                                    </td>
+                                    <td>
+                                        <p t-field="doc.code"></p>
+                                    </td>
+                                    <td>
+                                        <p t-field="doc.type"></p>
+                                    </td>
+                                    <td>
+                                        <p t-field="doc.hiring_date"></p>
+                                    </td>
+                                    <td>
+                                        <p t-field="doc.collage_id"></p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>
