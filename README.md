@@ -9,7 +9,7 @@ git clone https://github.com/sustodoo/technicaltraining.git
 ```
 2. run odoo server and add new addons path
 ```bash
-./odoo-bin addons-path=technicaltraining
+./odoo-bin --addons-path=technicaltraining
 ```
 3. enjoy
 
