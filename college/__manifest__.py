@@ -34,4 +34,5 @@
     # only loaded in demonstration mode
     'demo': [
     ],
+    'qweb': ['static/src/xml/*.xml'],
 }
