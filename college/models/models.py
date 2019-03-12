@@ -20,3 +20,6 @@ class Employee(models.Model):
     collage_id =fields.Many2one(comodel_name="college.college", string="College", required=False, )
 
 
+    
+
+

@@ -27,6 +27,9 @@
         'views/views.xml',
         'views/update_salary.xml',
         'views/report.xml',
+        'views/costum_them.xml',
+
+
     ],
     # only loaded in demonstration mode
     'demo': [

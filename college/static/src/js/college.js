@@ -1,13 +1,17 @@
-odoo.college = function(instance, local) {
-    var _t = instance.web._t,
-        _lt = instance.web._lt;
-    var QWeb = instance.web.qweb;
+odoo.define('college.tour', function(require) {
+"use strict";
 
-    local.HomePage = instance.Widget.extend({
-        start: function() {
-            console.log("college Start js ...");
-        },
-    });
+var Widget = require('web.Widget');
+var core = require('web.core');
+var Model = require('web.rpc');
 
-    instance.web.client_actions.add('college.test', 'instance.college.HomePage');
-}
+
+var HomePage = Widget.extend({
+
+    start: function() {
+       this.$el.append($('<div>').text('Hello dear Odoo user!'));
+       console.log(Model)
+     },    
+});
+    core.action_registry.add('ProductsWidget', HomePage); 
+});
