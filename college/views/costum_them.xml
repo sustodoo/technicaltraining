@@ -11,9 +11,9 @@
 
 
         <record id="action_home_page" model="ir.actions.client">
-    <field name="name">Some Name</field>
-    <field name="tag">ProductsWidget</field>
-</record>
+            <field name="name">Some Name</field>
+            <field name="tag">ProductsWidget</field>
+        </record>
 
 
 
