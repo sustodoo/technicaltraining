@@ -27,6 +27,7 @@
                             <group>
                                 <field name="name"/>
                                 <field name="hiring_date"/>
+                                <field name="collage_id" widget="many2one_buttons"/>
                             </group>
 
                             <group>

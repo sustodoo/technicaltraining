@@ -11,3 +11,8 @@
     margin: 10px;
 }
 
+.oe_form_field_many2one_buttons button
+{
+    margin: 0em .2em .2em 0em;
+}
+
