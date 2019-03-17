@@ -2,9 +2,14 @@
 # Copyright YEAR(S), AUTHOR(S)
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 {
-   'name': 'To-Do Application',
- 'description': 'Manage personal to-do tasks.',
- 'author': 'Daniel Reis',
- 'depends': ['base'],
- 'application': True,
+'name': 'To-Do Application',
+'description': 'Manage personal to-do tasks.',
+'author': 'Daniel Reis',
+'depends': ['base'],
+'application': True,
+'data': [
+'views/todo_menu.xml',
+'views/todo_view.xml',
+],
+
 }
